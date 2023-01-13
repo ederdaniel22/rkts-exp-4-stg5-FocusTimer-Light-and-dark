@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --bg-color: #121214;
+
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+  --text-color: #ffffff;
+  --bg-base: #ffffff;
+  --card-one: #e1e1e6;
+  --card-two: #090979;
+  --span-text-color: #ffd700;
+}
+body {
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 128rem;
+  min-height: 100vh;
+}
+.container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  max-width: 82.1rem;
+  max-height: 100vh;
+  gap: 5rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+section .timer {
+  display: flex;
+  line-height: 14.8rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: clamp(12rem, 4rem + 10vw, 8rem);
+
+  margin-bottom: -5rem;
+}
+
+.timer-span {
+  display: flex;
+  line-height: 14rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: clamp(12rem, 4rem + 10vw, 8rem);
+  color: var(--bg-color);
+
+  margin-bottom: 1.6rem;
+}
+
+.timer-buttons {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  margin: 0;
+
+  border-radius: 9999px;
+  width: 33rem;
+}
+
+.timer-buttons .set,
+.pause {
+  margin: 0;
+  padding: 0 0 1.5rem 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+  height: 33rem;
+  gap: 2rem;
+}
+.tree,
+.house,
+.fire,
+.rain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13.8rem;
+  height: 14.7rem;
+  border-radius: 2.4rem;
+  gap: 4rem;
+  margin: 0;
+}
+.tree:hover,
+.house:hover,
+.fire:hover,
+.rain:hover {
+  background-color: green;
+  transform: scale(1.1);
+  transition: ease;
+}
+.tree,
+.house,
+.fire {
+  background-color: var(--card-one);
+}
+.rain {
+  background-color: var(--card-two);
+}
+#floresta,
+#rain,
+#house,
+#fire {
+  background-color: transparent;
+  width: 13.8rem;
+  height: 2rem;
+  left: 0;
+  bottom: -2rem;
+}
+.button {
+  position: absolute;
+  width: 3.6rem;
+  height: 3.6rem;
+  top: 6.4rem;
+  right: 10rem;
+}
